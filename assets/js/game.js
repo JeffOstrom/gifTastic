@@ -38,7 +38,8 @@ var topics = ["tiger", "bear", "parrot", "shark, whale, lion, leopard"];
 
      
       renderButton();
-function callApi(){
+    
+    function callApi(){
       var term = $(this).attr("data-name");
 
       $.ajax({
@@ -46,15 +47,20 @@ function callApi(){
         method: "GET",
         data: {"q": term}
       }).done(function(response){
-        console.log(this.url)
+     
 
-        var imageURL = response.data.image_original_url;
+        var imageUrl = response.data.image_original_url;
 
         var animalImage = $("<img>");
 
+        animalImage.attr("src", imgageUrl);
+        animalImage.attr("alt", animalImage);
+
         console.log(response);
+
+        $("#view-gif").prepend(animalImage);
       });
-}
+};
  
 
 
