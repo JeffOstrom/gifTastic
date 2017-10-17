@@ -1,3 +1,7 @@
+body{
+	background: url("../images/green_cup.png");
+}
+
 #animals {
 	color: white;
 	background-color: blue;
@@ -6,6 +10,7 @@
 
 #animal-input{
 	font-size: 20px;
+
 }
 
 #lab{
@@ -21,5 +26,11 @@
 .gif{
 	margin: 10px;
 
+}
+
+.animal{
+	background-color: blue;
+	color: white;
+	font-size: 20px;
 }
 

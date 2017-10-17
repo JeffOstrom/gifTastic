@@ -3,19 +3,19 @@ $(document).ready(function(){
     
 
     $(document.body).on("click", ".animal", callApi); 
-
+    //click function for gif animation/still
     $(document.body).on("click", ".gif", function(){
 
       var state= $(this). attr("data-state");
-
+      //compares both animated/still and runs
       if(state ==="still")
-      {
+      {//animation 
         var animatedUrl = $(this).attr("data-animatedUrl");
         $(this).attr("src", animatedUrl);
         $(this).attr("data-state", "animated");
 
       }
-      else{
+      else{// runs still
         var stillUrl = $(this).attr("data-stillUrl");
         $(this).attr("src", stillUrl);
         $(this).attr("data-state", "still");
@@ -39,7 +39,7 @@ $(document).ready(function(){
               a.attr("data-name", topics[i]);
 
               a.text(topics[i]);
-
+              //display submitted button
               $("#buttons-view").append(a);
 
             }
