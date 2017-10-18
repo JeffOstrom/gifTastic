@@ -7,7 +7,7 @@ $(document).ready(function(){
     $(document.body).on("click", ".gif", function(){
 
       var state= $(this). attr("data-state");
-      //compares both animated/still and runs
+      //compares both animated/still and runs giph images. 
       if(state ==="still")
       {//animation 
         var animatedUrl = $(this).attr("data-animatedUrl");
@@ -33,9 +33,9 @@ $(document).ready(function(){
             for (var i = 0; i < topics.length; i++) {
                 
               var a = $("<button>");
-
+                //adding class to the button
               a.addClass("animal");
-
+                // Data-attribute
               a.attr("data-name", topics[i]);
 
               a.text(topics[i]);
@@ -80,11 +80,11 @@ $(document).ready(function(){
             // Here is the data I needed to pull from each gif. I choose small images. 
             var stillUrl = response.data[i].images.fixed_height_small_still.url;
             var animatedUrl = response.data[i].images.fixed_height_small.url;
-            var rating = response.data[i].rating;
+            var rating = response.data[i].rating;//This is what will display the rating on images running thru the loop
             // This is creating the images for animals 
             var animalImage = $("<img>");
 
-            // This adds attributes to the image. I received help with this section since was unsure how to get the still/animated functioning. 
+            // This adds attributes to the image. I received help with this section since was struggling how to get the still/animated functioning. 
             animalImage.addClass("gif");
             animalImage.attr("src", stillUrl);
             animalImage.attr("alt", "image");
