@@ -1,4 +1,5 @@
 # gifTastic
+Synopsis
 
 https://jeffostrom.github.io/gifTastic/
 
