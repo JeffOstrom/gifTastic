@@ -1,6 +1,6 @@
-//Ready function always at top
-$(document).ready(function(){
-    
+  //Ready function always at top
+  $(document).ready(function(){
+      
 
     $(document.body).on("click", ".animal", callApi); 
     //click function for gif animation/still
@@ -93,9 +93,8 @@ $(document).ready(function(){
             animalImage.attr("data-state", "still");
 
             
-            // This is going to display the image first with .prepend
+            // This is going to display the image first with .prepend.
             $("#view-gif").prepend(animalImage);
-
           }
 
       });
